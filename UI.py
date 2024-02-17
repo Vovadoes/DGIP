@@ -51,8 +51,8 @@ class mywindow(QtWidgets.QMainWindow):
         if DEDUG:
             self.ui.doubleSpinBox.setValue(2000)  # n
             self.ui.doubleSpinBox_2.setValue(0.002)  # p
-            self.ui.doubleSpinBox_5.setValue(1)  # k1
-            self.ui.doubleSpinBox_6.setValue(5)  # k2
+            self.ui.doubleSpinBox_5.setValue(0)  # k1
+            self.ui.doubleSpinBox_6.setValue(2)  # k2
 
         change_size(self)
 
