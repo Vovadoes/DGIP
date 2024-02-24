@@ -100,9 +100,22 @@ class mywindow(QtWidgets.QMainWindow):
         # add_def_pushButton_2 = lambda : self.calculation.difficult()
         # self.ui.pushButton.clicked.connect(lambda : self.calculate(add_def_pushButton))
         # self.ui.pushButton_2.clicked.connect(lambda : self.calculate(add_def_pushButton_2))
+
+        self.ui.doubleSpinBox.valueChanged.connect(self.change_n)
+        self.ui.doubleSpinBox_5.valueChanged.connect(self.change_k1)
+        self.ui.doubleSpinBox_6.valueChanged.connect(self.change_k2)
         
         add_def_pushButton = lambda: None
         self.ui.pushButton.clicked.connect(lambda: self.calculate(add_def_pushButton))
+
+    def change_n(self):
+        self.ui.doubleSpinBox_6.setMaximum(self.ui.doubleSpinBox.value())
+
+    def change_k2(self):
+        self.ui.doubleSpinBox_5.setMaximum(self.ui.doubleSpinBox_6.value())
+
+    def change_k1(self):
+        self.ui.doubleSpinBox_6.setMinimum(self.ui.doubleSpinBox_5.value())
 
     def calculate(self, fun, *args, **kwargs):
         self.variables.update()
@@ -169,7 +182,7 @@ class Finish(QtWidgets.QDialog):
         self.ui.doubleSpinBox_2.setValue(self.parent.variables.n)
         self.ui.doubleSpinBox_3.setValue(self.parent.variables.k1)
         self.ui.doubleSpinBox_4.setValue(self.parent.variables.k2)
-        self.ui.doubleSpinBox.setValue(round(self.parent.calculation.summ_p_n, 3))
+        self.ui.doubleSpinBox.setValue(round(self.parent.calculation.summ_p_n, 7))
 
         # filter_table = lambda dct: round(dct['value'], 3)
         #

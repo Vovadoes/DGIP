@@ -1,4 +1,5 @@
 import math
+from decimal import Decimal
 
 # from Charts import *
 
@@ -21,17 +22,18 @@ class Calculation:
         self.p = p
         for i in range(k1, k2 + 1):
             self.summ_p_n += self.p_n(i)
+            print(self.p_n(i))
 
     def p_n(self, k):
         l = self.n * self.p  # !!!
-        return pow(math.e, -l) * pow(l, k) / math.factorial(k)
+        return Decimal(Decimal(math.e ** (-l)) * Decimal(l ** k) / Decimal(math.factorial(k)))
 
 
 if __name__ == "__main__":
-    n = 2000
-    p = 0.002
+    n = 800
+    p = 0.005
     k1 = 0
-    k2 = 2
+    k2 = 3
     calculation = Calculation(n, p, k1, k2)
     print(calculation.summ_p_n)
     # ChartLinePLT(calculation.chart_v_y_data)
