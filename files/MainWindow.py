@@ -265,7 +265,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Определение зараженности зерен вредителями"))
         self.label_11.setText(_translate("MainWindow", "<html><head/><body><p>Определение зараженности зерен вредителями</p></body></html>"))
         self.label_8.setText(_translate("MainWindow", "<html><head/><body><p>=</p></body></html>"))
-        self.label_6.setText(_translate("MainWindow", "<html><head/><body><p>Введите вероятность того, что зерно заражено вредителями (p&lt;0.1):</p></body></html>"))
+        self.label_6.setText(_translate("MainWindow", "<html><head/><body><p>Введите вероятность того, что зерно заражено вредителями (<span style=\" font-style:italic;\">p</span>&lt;0,1):</p></body></html>"))
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p>p</p></body></html>"))
         self.label_16.setText(_translate("MainWindow", "<html><head/><body><p>Введите диапазон возможного числа зараженных зерен:</p></body></html>"))
         self.label_2.setText(_translate("MainWindow", "<html><head/><body><p>n</p></body></html>"))

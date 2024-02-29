@@ -92,7 +92,7 @@
            </font>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите вероятность того, что зерно заражено вредителями (p&amp;lt;0.1):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите вероятность того, что зерно заражено вредителями (&lt;span style=&quot; font-style:italic;&quot;&gt;p&lt;/span&gt;&amp;lt;0,1):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
